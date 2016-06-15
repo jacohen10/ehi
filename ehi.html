@@ -31,11 +31,11 @@
 							<nav id="nav">
 								<ul>
 									<li class="current"><a href="index.html">Home</a></li>
-									<li><a href="#">GSA Contract</a></li>
-									<li><a href="#">TV Installation</a></li>
-									<li><a href="#">LED Fixtures</a></li>
-									<li><a href="#">Manufacturers</a></li>
-									<li><a href="#">Contact Us</a></li>
+									<li><a href="#gsa">GSA Contract</a></li>
+									<li><a href="#tv">TV Installation</a></li>
+									<li><a href="#led">LED Fixtures</a></li>
+									<li><a href="#manu">Manufacturers</a></li>
+									<li><a href="#contact">Contact Us</a></li>
 								</ul>
 							</nav>
 
@@ -48,7 +48,7 @@
 						<span id="title">757-640-0243 <i class="fa fa-phone" aria-hidden="true"></i></span>
 					</div>
 					<section id="intro" class="container">
-						<span class="section-header">GSA Contract</span>
+						<span class="section-header">GSA Contract<a name="gsa"></a></span>
 						<ul class="style1">
 							<li><strong>Contract#</strong>:  GS-03F-0036P</li>
 							<li><strong>Contractor:</strong> EHI COMPANY</li>
@@ -69,7 +69,7 @@
 
 			<!-- Main -->
 				<div class="wrapper style2">
-					<div class="title">TV Installation</div>
+					<div class="title">TV Installation <a name="t"></a></div>
 					<div id="main" class="container">
 
 						<!-- Features -->
@@ -265,6 +265,24 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+				  $(function() {
+				    $('a[href*="#"]:not([href="#"])').click(function() {
+				      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				        var target = $(this.hash);
+				        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				        if (target.length) {
+				          $('html, body').animate({
+				            scrollTop: target.offset().top
+				          }, 1000);
+				          return false;
+				        }
+				      }
+				    });
+				  });
+				});
+			</script>
 
 	</body>
 </html>
